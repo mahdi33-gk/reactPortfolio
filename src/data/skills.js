@@ -3,9 +3,9 @@ import React from 'react';
 // Skills data
 const skills = {
   frontend: [
-    { name: 'React', level: 95 },
+    { name: 'React', level: 60 },
     { name: 'JavaScript', level: 90 },
-    { name: 'HTML/CSS', level: 85 },
+    { name: 'HTML/CSS', level: 70 },
     { name: 'Redux', level: 80 },
     { name: 'Tailwind CSS', level: 85 }
   ],

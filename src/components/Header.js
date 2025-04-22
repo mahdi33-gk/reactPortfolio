@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container flex justify-between items-center">
         <div className="logo">
           <a href="#hero" className="font-heading text-2xl font-bold">
-            JD<span className="text-highlight">.</span>
+            Mehedi<span className="text-highlight">.</span>
           </a>
         </div>
         <nav>
