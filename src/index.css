@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-primary text-textColor font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold mb-4;
+  }
+  
+  p {
+    @apply mb-4 text-textSecondary;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+  
+  .section {
+    @apply py-24;
+  }
+  
+  .section-header {
+    @apply text-center mb-16;
+  }
+  
+  .section-header h2 {
+    @apply text-4xl uppercase tracking-wider inline-block relative;
+  }
+  
+  .underline {
+    @apply w-20 h-1 bg-highlight mx-auto mt-4;
+  }
+  
+  .btn {
+    @apply inline-block py-3 px-8 rounded-full font-heading font-semibold uppercase tracking-wide transition-all duration-300 text-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-highlight text-white hover:bg-opacity-90 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-white border-2 border-highlight hover:bg-highlight hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .btn-small {
+    @apply py-2 px-5 text-xs;
+  }
+  
+  .social-icon {
+    @apply flex items-center justify-center w-10 h-10 rounded-full bg-accent text-white text-lg transition-all duration-300 hover:bg-highlight hover:-translate-y-1;
+  }
+  
+  .skill-bar {
+    @apply w-full h-2 bg-primary rounded-full overflow-hidden;
+  }
+  
+  .skill-level {
+    @apply h-full bg-highlight rounded-full transition-all duration-1000;
+  }
+  
+  .filter-btn {
+    @apply bg-primary text-white border-none py-2 px-5 rounded-full cursor-pointer font-heading font-semibold transition-all duration-300 hover:bg-highlight;
+  }
+  
+  .filter-btn.active {
+    @apply bg-highlight;
+  }
+  
+  .project-card {
+    @apply bg-primary rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2;
+  }
+  
+  .project-img {
+    @apply relative h-48 overflow-hidden;
+  }
+  
+  .project-tech {
+    @apply flex flex-wrap gap-2 mb-4;
+  }
+  
+  .project-tech span {
+    @apply bg-accent text-white py-1 px-2 rounded text-xs font-medium;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.typing-effect {
+  @apply overflow-hidden whitespace-nowrap border-r-2 border-highlight;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink .75s step-end infinite;
+}
+
+/* Header styles */
+.header {
+  @apply fixed top-0 left-0 w-full z-50 bg-primary bg-opacity-90 backdrop-blur-md py-5 transition-all duration-300;
+}
+
+.header.scrolled {
+  @apply py-4 shadow-md;
+}
+
+/* Mobile menu */
+.hamburger {
+  @apply hidden cursor-pointer;
+}
+
+.bar {
+  @apply block w-6 h-0.5 my-1 bg-white transition-all duration-300;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    @apply block;
+  }
+  
+  .nav-links {
+    @apply fixed top-20 -left-full w-full flex-col bg-secondary py-5 text-center transition-all duration-300 shadow-md;
+  }
+  
+  .nav-links.active {
+    @apply left-0;
+  }
+  
+  .nav-links li {
+    @apply my-4;
+  }
+}
