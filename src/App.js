@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App w-11/12 mx-auto">
       <Header />
       <main>
         <Hero />

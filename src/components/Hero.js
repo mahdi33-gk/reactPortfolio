@@ -4,12 +4,12 @@ import { socialLinks } from '../data/content';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center bg-primary relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center bg-primary relative overflow-hidden mt-32 md:mt-10">
       <div className="absolute inset-0 bg-gradient-radial from-accent/30 via-transparent to-transparent"></div>
       <div className="container flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="hero-content max-w-xl">
           <h1 className="text-5xl md:text-6xl mb-2">Mehedi</h1>
-          <h2 className="text-3xl text-highlight mb-5 typing-effect">MERN Stack Developer</h2>
+          <h2 className="text-3xl text-highlight mb-5 typing-effect">Dedicated MERN Stack Developer.....</h2>
           <p className="text-xl mb-8">I currently pursuing a Diploma in CST at Tangail Polytechnic Institute. Coding is my oxygen! I build robust web applications using MongoDB, Express, React, and Node.js, and I’m always eager to explore new technologies. My GitHub is my gym, where I flex my skills daily, building not just projects but also my mindset and wealth.</p>
           <div className="hero-cta flex flex-col sm:flex-row gap-4 mb-8">
             <a href="#projects" className="btn btn-primary">View My Work</a>
@@ -17,7 +17,7 @@ const Hero = () => {
           </div>
           <div className="social-icons flex gap-4">
             {socialLinks.map((link, index) => (
-              <a key={index} href={link.href} className="social-icon" aria-label={link.name}>
+              <a key={index} target='_blank' href={link.href} className="social-icon" aria-label={link.name} rel="noreferrer">
                 <i className={link.icon}></i>
               </a>
             ))}

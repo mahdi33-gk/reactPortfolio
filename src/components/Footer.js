@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="footer-about">
             <div className="footer-logo mb-4">
               <a href="#hero" className="font-heading text-3xl font-bold">
-                JD<span className="text-highlight">.</span>
+                Mehedi<span className="text-highlight">.</span>
               </a>
             </div>
             <p className="mb-4">
@@ -64,7 +64,7 @@ const Footer = () => {
         
         <div className="footer-bottom border-t border-accent mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-textSecondary">
-            &copy; {currentYear} John Doe. All rights reserved.
+            &copy; {currentYear} Mehedi. All rights reserved.
           </p>
           <a 
             href="#hero" 

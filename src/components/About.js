@@ -4,7 +4,7 @@ import { aboutDetails } from "../data/content";
 
 const About = () => {
   return (
-    <section id="about" className="section bg-secondary">
+    <section id="about" className="section bg-secondary mt-4 md:mt-10">
       <div className="container">
         <div className="section-header">
           <h2>About Me</h2>
@@ -16,8 +16,8 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-highlight/30 to-transparent z-10"></div>
               <img
                 src="/images/profile.jpg"
-                alt="John Doe - MERN Stack Developer"
-                className="w-full transition-transform duration-300 hover:scale-105"
+                alt="Mehedi - MERN Stack Developer"
+                className="w-full md:h-[700px] md:object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
           </div>
